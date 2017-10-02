@@ -1,0 +1,30 @@
+{
+  "apps": [
+    {
+      "name": "bojack",
+      "script": "backpack dev",
+      "env": {
+        "COMMON_VARIABLE": "true"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "deploy": {
+    "production": {
+      "user": "root",
+      "host": ["120.78.94.112"],
+      "port": "22",
+      "ref": "origin/master",
+      "repo": "https://github.com/rechenai/vue-ssr-wechat-bojack.git",
+      "path": "/www/bojack/production",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "post-deploy": "npm install",
+      "pre-deploy-local": "echo 'Deploy Done!'",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
