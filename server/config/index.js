@@ -1,7 +1,8 @@
 export default {
+  db: 'mongodb://localhost/bojack',
   wechat: {
     appID: 'wxf951b2f913db6232',
-    appsecret: 'c4d77d24cc47f7e2aa27b01b556749b1',
+    appSecret: '0506f92fa5357332c15dda490a8cd737',
     token: 'arewebojack'
   }
 }
